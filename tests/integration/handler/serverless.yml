@@ -170,8 +170,8 @@ functions:
           request:
             uri: http://mockbin.org/request/{proxy}
             parameters:
-                paths:
-                  proxy: true
+              paths:
+                proxy: true
 
   TestPayloadSchemaValidation:
     events:

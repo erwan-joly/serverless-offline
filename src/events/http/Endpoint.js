@@ -104,7 +104,7 @@ export default class Endpoint {
       if (normalizedIntegration === 'LAMBDA_PROXY') {
         return 'AWS_PROXY'
       }
-      if(normalizedIntegration === 'HTTP_PROXY') {
+      if (normalizedIntegration === 'HTTP_PROXY') {
         return 'AWS_PROXY'
       }
       return normalizedIntegration
