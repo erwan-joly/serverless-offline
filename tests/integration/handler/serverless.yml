@@ -161,6 +161,18 @@ functions:
           path: /{id}/test-resource-variable-handler
     handler: src/handler.TestResourceVariable
 
+  TestHttpProxy:
+    events:
+      - http:
+          method: get
+          path: /test-http-proxy-handler/{proxy+}
+          integration: http-proxy
+          request:
+            uri: http://mockbin.org/request/{proxy}
+            parameters:
+              paths:
+                proxy: true
+
   TestPayloadSchemaValidation:
     events:
       - http:
